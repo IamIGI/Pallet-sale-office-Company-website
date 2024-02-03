@@ -7,9 +7,24 @@ import Image from 'next/image';
 
 export default function MainPageNavigation() {
   const menu = [
-    { href: '/about', text: 'O nas', icon: Warehouse, color: '#F1E7DA' },
-    { href: '/offer', text: 'Oferta', icon: Pallets, color: '#EADBC8' },
-    { href: '/contact', text: 'Kontakt', icon: FastEnvelope, color: '#DCC3A3' },
+    {
+      href: '/sub-page/about',
+      text: 'O nas',
+      icon: Warehouse,
+      color: '#F1E7DA',
+    },
+    {
+      href: '/sub-page//offer',
+      text: 'Oferta',
+      icon: Pallets,
+      color: '#EADBC8',
+    },
+    {
+      href: '/sub-page//contact',
+      text: 'Kontakt',
+      icon: FastEnvelope,
+      color: '#DCC3A3',
+    },
   ];
 
   return (

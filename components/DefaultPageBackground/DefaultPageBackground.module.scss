@@ -1,0 +1,15 @@
+.wrapper {
+  margin: 0;
+  position: relative;
+  z-index: -2;
+  background-color: #f8f3ed;
+  height: 100%;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.content {
+  z-index: 0;
+}
