@@ -6,4 +6,19 @@ body {
   margin: 0;
   max-width: 2000px;
   margin: auto;
+  height: 100vh;
+  // maybe change this for min-height in future
+}
+
+.home-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.home-page-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
 }
