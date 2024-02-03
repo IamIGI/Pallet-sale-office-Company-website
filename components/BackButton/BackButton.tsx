@@ -7,13 +7,8 @@ import Image from 'next/image';
 
 export default function BackButton() {
   const router = useRouter();
-
-  function navigateHome() {
-    console.log('clicked');
-    router.push('/');
-  }
   return (
-    <button className={classes.buttonWrapper} onClick={navigateHome}>
+    <button className={classes.buttonWrapper} onClick={() => router.push('/')}>
       <Image src={BackIcon} alt="goBack" width={50} height={50} />
     </button>
   );
