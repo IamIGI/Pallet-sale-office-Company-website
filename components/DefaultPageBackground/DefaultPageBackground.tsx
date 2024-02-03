@@ -20,7 +20,7 @@ export default function DefaultPageBackground({
           <path d="M0 0H1820V812L656.5 597.5L0 0Z" fill="#F1E7DA" />
         </svg>
       </SVGBackground>
-      <div className={classes.content}>{children}</div>
+      <div className={classes.content}> {children}</div>
     </div>
   );
 }

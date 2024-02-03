@@ -1,3 +1,4 @@
+import BackButton from '../BackButton/BackButton';
 import SectionBackground from '../SVGBackground/SVGBackground';
 import classes from './AboutUsSection.module.scss';
 
