@@ -1,0 +1,57 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.titleBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  width: 60%;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  line-height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+    span {
+      font-weight: 700;
+      font-size: 45px;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    h1 {
+      font-size: 28px;
+      span {
+        font-size: 38px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 885px) {
+    height: 250px;
+    padding-right: 10px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+  }
+}
