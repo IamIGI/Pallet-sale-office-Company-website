@@ -1,4 +1,3 @@
-import BackButton from '../BackButton/BackButton';
 import SectionBackground from '../SVGBackground/SVGBackground';
 import classes from './AboutUsSection.module.scss';
 
@@ -13,7 +12,7 @@ export default function AboutUsSection() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0 0H1724V544L439.525 386.278L0 0Z" fill="#F8F3ED" />
+          <path d="M0 0H1724V544L439.525 386.278L0 0Z" fill="currentColor" />
         </svg>
       </SectionBackground>
 

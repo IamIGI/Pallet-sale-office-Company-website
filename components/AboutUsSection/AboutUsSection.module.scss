@@ -2,4 +2,8 @@
   position: relative;
   outline: 1px solid red;
   height: 450px;
+
+  svg {
+    color: var(--default-background-color);
+  }
 }

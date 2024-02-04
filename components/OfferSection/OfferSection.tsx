@@ -12,7 +12,7 @@ export default function OfferSection() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M-2 0L1726 177.5V577L-2 698V0Z" fill="#F1E7DA" />
+          <path d="M-2 0L1726 177.5V577L-2 698V0Z" fill="currentColor" />
         </svg>
       </SectionBackground>
 

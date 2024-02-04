@@ -11,19 +11,16 @@ export default function MainPageNavigation() {
       href: '/sub-page/about',
       text: 'O nas',
       icon: Warehouse,
-      color: '#F1E7DA',
     },
     {
       href: '/sub-page//offer',
       text: 'Oferta',
       icon: Pallets,
-      color: '#EADBC8',
     },
     {
       href: '/sub-page//contact',
       text: 'Kontakt',
       icon: FastEnvelope,
-      color: '#DCC3A3',
     },
   ];
 
@@ -32,7 +29,7 @@ export default function MainPageNavigation() {
       <nav className={classes.nav}>
         <ul>
           {menu.map((item, index) => (
-            <li key={index} style={{ backgroundColor: item.color }}>
+            <li key={index} className={classes[`menuBgColor_${index + 1}`]}>
               <Link className={classes.link} href={item.href}>
                 <div className={classes.iconWrapper}>
                   <Image src={item.icon} alt={item.text} fill />
