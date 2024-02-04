@@ -14,7 +14,7 @@ export default function ContactUsSection() {
         >
           <path
             d="M284.97 212.682L1717.37 0V599H0L284.97 212.682Z"
-            fill="#F8F3ED"
+            fill="currentColor"
           />
         </svg>
       </SectionBackground>

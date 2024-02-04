@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  max-width: 2000px;
+  // max-width: 2000px;
   margin: auto;
   height: 100vh;
   // maybe change this for min-height in future
@@ -14,6 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  max-width: 2000px;
+  margin: auto;
 }
 
 .home-page-section-wrapper {
