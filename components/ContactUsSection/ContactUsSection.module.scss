@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   outline: 1px solid red;
-  height: 650px;
+  min-height: 650px;
 
   svg {
     color: var(--default-background-color);
