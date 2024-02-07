@@ -6,6 +6,7 @@ import gears from '@/assets/icons/Gears.svg';
 import truck from '@/assets/icons/Truck.svg';
 import certificate from '@/assets/icons/Certificats.svg';
 import Image from 'next/image';
+import Tile from '../Tile/tile';
 
 export default function AboutUsSection({ data }: { data: SectionModel }) {
   const icons = [calendar, gears, truck, certificate];
@@ -23,7 +24,8 @@ export default function AboutUsSection({ data }: { data: SectionModel }) {
           <path d="M0 0H1724V544L439.525 386.278L0 0Z" fill="currentColor" />
         </svg>
       </SectionBackground>
-      <div className={classes.contentWrapper}>
+
+      <div className="sectionWrapper">
         <div className={classes.titleWrapper}>
           <h1>{data.title}</h1>
           <div className={classes.line} />
@@ -35,14 +37,7 @@ export default function AboutUsSection({ data }: { data: SectionModel }) {
           </article>
           <div className={classes.tileWrapper}>
             {data.tilesText.map((text, index) => (
-              <div className={classes.tile} key={index}>
-                <div className={classes.tileBackground}>
-                  <div className={classes.iconWrapper}>
-                    <Image src={icons[index]} alt={text} fill />
-                  </div>
-                </div>
-                <h3 dangerouslySetInnerHTML={{ __html: text }} />
-              </div>
+              <Tile key={index} icons={icons} index={index} text={text} />
             ))}
           </div>
         </div>

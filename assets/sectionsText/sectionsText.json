@@ -10,5 +10,16 @@
             "Własne punkty <br /> transportu",
             "Certyfikat rzetelności"
         ]
+    },
+    {
+        "section": "offer",
+        "title": "Oferta",
+        "excerpt": "Możliwość współpracy w obrocie paletami oraz zbiornikami 1000 litrów.",
+        "description": "Oferujemy Państwu odkup palet o wszystkich rozmiarach, jak również wymianę palet oraz wykoanie na każdy zamówiony wymiar. <br/>Terminy wykonania palet nietypowych po uzgodnienu telefonicznym.",
+        "tilesText": [
+            "Odkup palet we <br /> wszystkich rozmiarach",
+            "Palety nowe i <br /> używane",
+            "Palety o <br /> nietypowych rozmiarach"
+        ]
     }
 ]
