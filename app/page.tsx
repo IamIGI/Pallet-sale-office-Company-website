@@ -6,19 +6,19 @@ import sectionsData from '@/assets/sectionsText/sectionsText.json';
 import { SectionModel, Sections } from '@/models/sectionModel';
 
 export default async function HomePage() {
+  function getSectionData(sectionName: Sections) {
+    return (sectionsData as SectionModel[]).find(
+      (data) => data.section === sectionName
+    )!;
+  }
+
   return (
     <div className="home-page-wrapper">
       <MainHeadSection />
       <div className="home-page-section-wrapper">
         {/* {sectionsData.find((data) => data.section === 'AboutUs')!.section} */}
-        <AboutUsSection
-          data={
-            (sectionsData as SectionModel[]).find(
-              (data) => data.section === Sections.AboutUs
-            )!
-          }
-        />
-        <OfferSection />
+        <AboutUsSection data={getSectionData(Sections.AboutUs)} />
+        <OfferSection data={getSectionData(Sections.Offer)} />
         <ContactUsSection />
       </div>
     </div>
