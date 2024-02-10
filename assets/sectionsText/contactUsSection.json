@@ -19,9 +19,9 @@
         }
     ],
     "mapLocations": [
-        "Kraków, ul. Nad Serafą 39",
-        "Kraków, ul. Nad Serafą 39",
-        "Kraków, ul. Nad Serafą 39",
-        "Kraków, ul. Nad Serafą 39"
+        "Kraków, <br/> ul. Nad Serafą 39",
+        "Kraków, <br/> ul. Nad Serafą 39",
+        "Kraków, <br/> ul. Nad Serafą 39",
+        "Kraków, <br/> ul. Nad Serafą 39"
     ]
 }
