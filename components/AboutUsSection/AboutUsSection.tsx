@@ -5,7 +5,6 @@ import calendar from '@/assets/icons/Callendar.svg';
 import gears from '@/assets/icons/Gears.svg';
 import truck from '@/assets/icons/Truck.svg';
 import certificate from '@/assets/icons/Certificats.svg';
-import Image from 'next/image';
 import Tile from '../Tile/tile';
 
 export default function AboutUsSection({ data }: { data: SectionModel }) {

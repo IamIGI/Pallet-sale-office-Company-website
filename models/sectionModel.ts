@@ -11,3 +11,15 @@ export interface SectionModel {
   description: string;
   tilesText: string[];
 }
+
+export interface ContactUsType {
+  type: 'phone' | 'email';
+  name: string;
+  values: string[];
+}
+export interface ContactUsSectionModel {
+  section: string;
+  title: string;
+  contact: ContactUsType[];
+  mapLocations: string[];
+}
