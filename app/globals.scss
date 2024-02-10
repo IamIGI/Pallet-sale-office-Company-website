@@ -49,6 +49,10 @@ p {
   font-size: var(--big-description-font);
 }
 
+button {
+  font-size: var(--button-font);
+}
+
 @media screen and (max-width: 1400px) {
   h1 {
     font-size: var(--title-font-medium);
@@ -63,6 +67,10 @@ p {
 
   p {
     font-size: var(--big-description-font-medium);
+  }
+
+  button {
+    font-size: var(--button-font-medium);
   }
 }
 
@@ -81,6 +89,9 @@ p {
 
   p {
     font-size: var(--big-description-font-small);
+  }
+  button {
+    font-size: var(--button-font-small);
   }
 }
 

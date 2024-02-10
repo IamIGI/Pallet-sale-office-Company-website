@@ -4,7 +4,9 @@ import classes from './OfferSection.module.scss';
 import positiveDeal from '@/assets/icons/PositiveDeal.svg';
 import euroPallet from '@/assets/icons/EuroPallet.png';
 import cornerMeasurement from '@/assets/icons/CornerMeasurement.svg';
+import sendMessage from '@/assets/icons/SendMessage.svg';
 import Tile from '../Tile/tile';
+import Button from '../Button/Button';
 
 export default function OfferSection({ data }: { data: SectionModel }) {
   const icons = [positiveDeal, euroPallet, cornerMeasurement];
@@ -44,12 +46,26 @@ export default function OfferSection({ data }: { data: SectionModel }) {
                 <Tile icons={[icons[2]]} index={0} text={data.tilesText[2]} />
               </div>
             </div>
+            <div className={classes.displayOnBiggerScreen}>
+              <Button
+                icon={sendMessage}
+                text="Dowiedz się więcej"
+                href={'/sub-page/offer'}
+              />
+            </div>
           </div>
 
           <div className={classes.rightSection}>
             <h1>{data.title}</h1>
             <h2>{data.excerpt}</h2>
             <p dangerouslySetInnerHTML={{ __html: data.description }} />
+            <div className={classes.displayOnMediumScreen}>
+              <Button
+                icon={sendMessage}
+                text="Dowiedz się więcej"
+                href={'/sub-page/offer'}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,27 @@
+{
+    "section": "contactUs",
+    "title": "Kontakt",
+    "contact": [
+        {
+            "type": "phone",
+            "name": "Telefon",
+            "values": [
+                "+48 601 12 32 63",
+                "+48 132 41 32 02"
+            ]
+        },
+        {
+            "type": "email",
+            "name": "Email",
+            "values": [
+                "paletybiuro@onet.eu"
+            ]
+        }
+    ],
+    "mapLocations": [
+        "Kraków, ul. Nad Serafą 39",
+        "Kraków, ul. Nad Serafą 39",
+        "Kraków, ul. Nad Serafą 39",
+        "Kraków, ul. Nad Serafą 39"
+    ]
+}
