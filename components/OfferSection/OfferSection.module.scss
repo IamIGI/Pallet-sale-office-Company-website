@@ -2,7 +2,7 @@
   position: relative;
 
   height: fit-content;
-  min-height: 600px;
+  min-height: 450px;
 
   svg {
     color: var(--default-color-A);
@@ -92,7 +92,21 @@
   }
 }
 
+.displayOnBiggerScreen {
+  display: flex;
+}
+
+.displayOnMediumScreen {
+  display: none;
+}
+
 @media screen and (max-width: 1005px) {
+  .displayOnBiggerScreen {
+    display: none;
+  }
+  .displayOnMediumScreen {
+    display: flex;
+  }
   .contentWrapper {
     padding: 40px 0;
   }

@@ -2,7 +2,7 @@ import AboutUsSection from '@/components/AboutUsSection/AboutUsSection';
 import ContactUsSection from '@/components/ContactUsSection/ContactUsSection';
 import MainHeadSection from '@/components/MainSection/MainHeadSection/MainHeadSection';
 import OfferSection from '@/components/OfferSection/OfferSection';
-import sectionsData from '@/assets/sectionsText/sectionsText.json';
+import sectionsData from '@/assets/sectionsText/offerAndAboutUsSection.json';
 import { SectionModel, Sections } from '@/models/sectionModel';
 
 export default async function HomePage() {
