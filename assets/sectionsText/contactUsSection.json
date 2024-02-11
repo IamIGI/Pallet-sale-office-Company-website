@@ -19,9 +19,25 @@
         }
     ],
     "mapLocations": [
-        "Kraków, <br/> ul. Nad Serafą 39",
-        "Kraków, <br/> ul. Nad Serafą 39",
-        "Kraków, <br/> ul. Nad Serafą 39",
-        "Kraków, <br/> ul. Nad Serafą 39"
+        {
+            "name": "Kraków, <br/> ul. Nad Serafą 39",
+            "lat": 50.08840306563905,
+            "lng": 19.986354390298473
+        },
+        {
+            "name": "Kraków, <br/> ul. Wodna 17",
+            "lat": 50.083116112718145,
+            "lng": 19.951528589792066
+        },
+        {
+            "name": "Kraków, <br/> ul. Słoneczna 2",
+            "lat": 50.081766744868446,
+            "lng": 19.972728768517637
+        },
+        {
+            "name": "Kraków, <br/> ul. Kwiatowa 9",
+            "lat": 50.09492834395229,
+            "lng": 19.969853440633806
+        }
     ]
 }
