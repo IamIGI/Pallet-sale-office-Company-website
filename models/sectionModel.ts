@@ -17,9 +17,15 @@ export interface ContactUsType {
   name: string;
   values: string[];
 }
+
+export interface MapLocation {
+  name: string;
+  lat: number;
+  lng: number;
+}
 export interface ContactUsSectionModel {
   section: string;
   title: string;
   contact: ContactUsType[];
-  mapLocations: string[];
+  mapLocations: MapLocation[];
 }

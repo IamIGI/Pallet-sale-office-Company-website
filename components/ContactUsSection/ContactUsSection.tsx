@@ -5,6 +5,8 @@ import Button from '../Button/Button';
 import sendMessage from '@/assets/icons/SendMessage.svg';
 import LocationDescr from '../locationDescr/locationDescr';
 
+import GoogleMapComponent from '../Map/GoogleMapComponent';
+
 export default function ContactUsSection({
   data,
 }: {
@@ -53,12 +55,14 @@ export default function ContactUsSection({
           <div className={classes.rightWrapper}>
             <div className={classes.locationWrapper}>
               {data.mapLocations.map((location) => (
-                <div key={location} className={classes.locationItemWrapper}>
-                  <LocationDescr text={location} />
+                <div key={location.lat} className={classes.locationItemWrapper}>
+                  <LocationDescr text={location.name} />
                 </div>
               ))}
             </div>
-            <div className={classes.mapWrapper}></div>
+            <div className={classes.mapWrapper}>
+              <GoogleMapComponent locations={data.mapLocations} />
+            </div>
           </div>
         </div>
       </div>
