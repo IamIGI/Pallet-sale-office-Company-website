@@ -2,8 +2,8 @@ import AboutUsSection from '@/components/AboutUsSection/AboutUsSection';
 import ContactUsSection from '@/components/ContactUsSection/ContactUsSection';
 import MainHeadSection from '@/components/MainSection/MainHeadSection/MainHeadSection';
 import OfferSection from '@/components/OfferSection/OfferSection';
-import sectionsData from '@/assets/sectionsText/offerAndAboutUsSection.json';
-import contactUsData from '@/assets/sectionsText/contactUsSection.json';
+import sectionsData from '@/assets/data/offerAndAboutUsSection.json';
+import contactUsData from '@/assets/data/contactUsSection.json';
 import {
   ContactUsSectionModel,
   SectionModel,
