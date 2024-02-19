@@ -1,0 +1,56 @@
+.wrapper {
+  li {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    .itemWrapper {
+      height: 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 700px;
+
+      padding: 0 10px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 19px;
+    }
+
+    .amountWrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+      height: 52px;
+
+      input {
+        height: 30px;
+        width: 50px;
+      }
+    }
+  }
+
+  input[type='checkbox'] {
+    width: 24px;
+    height: 24px;
+  }
+}
