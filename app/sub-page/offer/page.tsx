@@ -32,15 +32,27 @@ export default function OfferPage() {
         </section>
       </section>
       <section className={classes.bottomWrapper}>
-        <p
-          className={classes.subTitleDesc}
-          dangerouslySetInnerHTML={{ __html: data.subtitle_1_desc }}
-        />
+        <div className={classes.bottomSection}>
+          <div className={classes.leftSection}>
+            <p
+              className={classes.subTitleDesc}
+              dangerouslySetInnerHTML={{ __html: data.subtitle_1_desc }}
+            />
+          </div>
+          <div className={classes.rightSection}>
+            <div className={classes.hintWrapper}>
+              <p>
+                <Image src={infoIcon} alt="info" width="19" height="19" />
+                {data.hint}
+              </p>
+            </div>
+          </div>
+        </div>
         <div className={classes.buttonWrapper}>
           <p>{data.subtitle_2} </p>
           <Button
             text={data.button_text}
-            href="'/sub-page//contact'"
+            href="/sub-page/contact"
             icon={sendIcon}
           ></Button>
         </div>

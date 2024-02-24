@@ -50,7 +50,39 @@
   }
 
   input[type='checkbox'] {
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+
+  @media screen and (max-width: 1110px) {
+    li {
+      .itemWrapper {
+        width: 500px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1005px) {
+    li {
+      .itemWrapper {
+        width: 370px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    li {
+      .itemWrapper {
+        width: 500px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    li {
+      .itemWrapper {
+        width: 350px;
+      }
+    }
   }
 }
