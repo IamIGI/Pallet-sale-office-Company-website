@@ -13,7 +13,7 @@ export default function ContactUsSection({
   data: ContactUsSectionModel;
 }) {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="contactSection">
       <SectionBackground>
         <svg
           width="1718"

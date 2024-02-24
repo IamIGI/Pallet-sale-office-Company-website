@@ -7,11 +7,15 @@ import truck from '@/assets/icons/Truck.svg';
 import certificate from '@/assets/icons/Certificats.svg';
 import Tile from '../Tile/tile';
 
-export default function AboutUsSection({ data }: { data: SectionModel }) {
+interface AboutUsSectionProps {
+  data: SectionModel;
+}
+
+export default function AboutUsSection({ data }: AboutUsSectionProps) {
   const icons = [calendar, gears, truck, certificate];
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="aboutSection">
       <SectionBackground>
         <svg
           width="1724"
