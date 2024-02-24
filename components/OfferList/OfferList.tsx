@@ -1,12 +1,14 @@
 'use client';
 
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import classes from './OfferList.module.scss';
+import localStorageUtil, { lsKeys } from '@/utils/localStorage.util';
 
 interface OfferListInterface {
   data: string[];
 }
 export default function OfferList({ data }: OfferListInterface) {
+  console.log(data);
   const [isChecked, setIsChecked] = useState<boolean[]>(
     Array.from({ length: data.length }, () => false)
   );
@@ -39,6 +41,10 @@ export default function OfferList({ data }: OfferListInterface) {
     });
   }
 
+  useEffect(() => {
+    localStorageUtil.saveToLocalStorage(lsKeys.offerData, itemValue);
+  }, [itemValue]);
+
   return (
     <div className={classes.wrapper}>
       <ul>
@@ -55,7 +61,7 @@ export default function OfferList({ data }: OfferListInterface) {
               </div>
               {isChecked[index] && (
                 <div className={classes.amountWrapper}>
-                  <p>Ilość</p>{' '}
+                  <p>Ilość</p>
                   <input
                     value={itemValue[index]}
                     onChange={(e) => handleItemValueChange(e, index)}

@@ -7,7 +7,7 @@ import pageData from '@/assets/data/404Page.json';
 
 export default function NotFoundPage() {
   return (
-    <DefaultPageBackground>
+    <div className={classes.mainWrapper}>
       <HeaderDefaultPage />
       <div className={classes.wrapper}>
         <div className={classes.iconWrapper}>
@@ -19,6 +19,6 @@ export default function NotFoundPage() {
           <p dangerouslySetInnerHTML={{ __html: pageData.description }} />
         </div>
       </div>
-    </DefaultPageBackground>
+    </div>
   );
 }
