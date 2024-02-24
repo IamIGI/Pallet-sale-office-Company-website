@@ -1,3 +1,5 @@
+'use client';
+
 import AboutUsSection from '@/components/AboutUsSection/AboutUsSection';
 import ContactUsSection from '@/components/ContactUsSection/ContactUsSection';
 import MainHeadSection from '@/components/MainSection/MainHeadSection/MainHeadSection';
@@ -9,17 +11,33 @@ import {
   SectionModel,
   Sections,
 } from '@/models/sectionModel';
+import { useEffect } from 'react';
 
-export default async function HomePage() {
+export default function HomePage() {
   function getSectionData(sectionName: Sections) {
     return (sectionsData as SectionModel[]).find(
       (data) => data.section === sectionName
     )!;
   }
 
+  const scrollToSection = (section: string) => {
+    const targetSection = document.getElementById(section);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // useEffect(() => {
+  //   (window as any).scrollToSection = scrollToSection;
+
+  //   return () => {
+  //     (window as any).scrollToSection = undefined;
+  //   };
+  // }, [scrollToSection]);
+
   return (
     <div className="home-page-wrapper">
-      <MainHeadSection />
+      <MainHeadSection scrollToSection={scrollToSection} />
       <div className="home-page-section-wrapper">
         <AboutUsSection data={getSectionData(Sections.AboutUs)} />
         <OfferSection data={getSectionData(Sections.Offer)} />

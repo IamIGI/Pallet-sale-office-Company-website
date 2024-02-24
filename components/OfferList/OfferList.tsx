@@ -8,7 +8,6 @@ interface OfferListInterface {
   data: string[];
 }
 export default function OfferList({ data }: OfferListInterface) {
-  console.log(data);
   const [isChecked, setIsChecked] = useState<boolean[]>(
     Array.from({ length: data.length }, () => false)
   );
@@ -49,27 +48,25 @@ export default function OfferList({ data }: OfferListInterface) {
     <div className={classes.wrapper}>
       <ul>
         {data.map((item, index) => (
-          <>
-            <li key={index}>
-              <div className={classes.itemWrapper}>
-                <p dangerouslySetInnerHTML={{ __html: item }} />
+          <li key={index}>
+            <div className={classes.itemWrapper}>
+              <p dangerouslySetInnerHTML={{ __html: item }} />
+              <input
+                type="checkbox"
+                checked={isChecked[index]}
+                onChange={(e) => handleCheckboxChange(e, index)}
+              />
+            </div>
+            {isChecked[index] && (
+              <div className={classes.amountWrapper}>
+                <p>Ilość</p>
                 <input
-                  type="checkbox"
-                  checked={isChecked[index]}
-                  onChange={(e) => handleCheckboxChange(e, index)}
+                  value={itemValue[index]}
+                  onChange={(e) => handleItemValueChange(e, index)}
                 />
               </div>
-              {isChecked[index] && (
-                <div className={classes.amountWrapper}>
-                  <p>Ilość</p>
-                  <input
-                    value={itemValue[index]}
-                    onChange={(e) => handleItemValueChange(e, index)}
-                  />
-                </div>
-              )}
-            </li>
-          </>
+            )}
+          </li>
         ))}
       </ul>
     </div>

@@ -13,7 +13,7 @@ export default function OfferSection({ data }: { data: SectionModel }) {
 
   console.log();
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="offerSection">
       <SectionBackground topPosition={-80}>
         <svg
           width="1726"
