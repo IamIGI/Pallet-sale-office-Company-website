@@ -40,11 +40,13 @@ h1 {
 h2 {
   font-size: var(--excerpt-font);
 }
-
+textarea,
 h3 {
   font-size: var(--small-description-font);
 }
 
+label,
+input,
 p {
   font-size: var(--big-description-font);
 }
@@ -73,10 +75,13 @@ li {
   h2 {
     font-size: var(--excerpt-font-medium);
   }
+  textarea,
   h3 {
     font-size: var(--small-description-font-medium);
   }
 
+  label,
+  input,
   p {
     font-size: var(--big-description-font-medium);
   }
@@ -94,11 +99,13 @@ li {
   h2 {
     font-size: var(--excerpt-font-small);
   }
-
+  textarea,
   h3 {
     font-size: var(--small-description-font-small);
   }
 
+  label,
+  input,
   p {
     font-size: var(--big-description-font-small);
   }
