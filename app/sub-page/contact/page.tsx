@@ -3,7 +3,7 @@
 import FormInput from '@/components/Input/Input';
 import classes from './page.module.scss';
 import data from '@/assets/data/contactUsPage.json';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Button from '@/components/Button/Button';
 import sendIcon from '@/assets/icons/SendMessage.svg';
 
@@ -12,9 +12,20 @@ export default function ContactPage() {
   Object.keys(data.form).forEach((fieldName) => {
     initialFormValues[fieldName] = '';
   });
-
   const [formValues, setFormValues] =
     useState<typeof initialFormValues>(initialFormValues);
+
+  const textToCopyRef = useRef(null);
+
+  const handleCopy = async () => {
+    try {
+      if (textToCopyRef.current) {
+        await navigator.clipboard.writeText(data.email);
+      }
+    } catch (error) {
+      console.error('Failed to copy text: ', error);
+    }
+  };
 
   function handleInputValue(id: string, value: string) {
     setFormValues((prevData) => ({
@@ -77,8 +88,8 @@ export default function ContactPage() {
           icon={sendIcon}
         ></Button>
         <p>lub</p>
-        <p>
-          <span>{data.email}</span> <br /> kopiuj
+        <p onClick={handleCopy}>
+          <span ref={textToCopyRef}>{data.email}</span> <br /> kopiuj
         </p>
       </div>
     </div>
