@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 60px;
+
+  label {
+    display: none;
+    color: #928a8a;
+  }
+
+  .active {
+    display: block;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--default-text-color);
+    outline: none; /* Remove the default focus outline */
+
+    color: var(--default-text-color);
+
+    &::placeholder {
+      color: #928a8a;
+    }
+  }
+}

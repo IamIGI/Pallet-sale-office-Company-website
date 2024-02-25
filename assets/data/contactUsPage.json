@@ -1,0 +1,40 @@
+{
+    "title": "Skontaktuje się z nami",
+    "description": "Gotowy do zamówienia? Daj znam znać jakich elementów poszukujesz, pisząc do nas wiadomośc za pomocą poniższego formualrza, lub bezpośrednio na nasz e-mail",
+    "form": {
+        "name": {
+            "id": "nameAndSurname",
+            "label": "Imię i nazwisko",
+            "required": true,
+            "type": "text"
+        },
+        "company": {
+            "id": "company",
+            "label": "Nazwa firmy",
+            "type": "text",
+            "required": false,
+            "text": "text"
+        },
+        "phone": {
+            "id": "phone",
+            "label": "Telefon",
+            "required": true,
+            "type": "tel",
+            "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        },
+        "email": {
+            "id": "email",
+            "label": "Email",
+            "required": true,
+            "type": "email"
+        },
+        "topic": {
+            "id": "topic",
+            "label": "Temat",
+            "required": true,
+            "type": "text"
+        }
+    },
+    "buttonText": "Wyślij",
+    "email": "paletybiuro@gmail.com"
+}
