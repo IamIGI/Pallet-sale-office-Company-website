@@ -47,7 +47,6 @@
 }
 
 .bottomWrapper {
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -62,5 +61,13 @@
       color: var(--default-text-color);
       text-decoration: underline;
     }
+  }
+}
+
+.errorWrapper {
+  p {
+    color: red;
+    margin: 0;
+    margin-top: 10px;
   }
 }

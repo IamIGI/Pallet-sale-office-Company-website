@@ -14,24 +14,24 @@ interface FormData {
 
 interface FormInputProps {
   formData: FormData;
+  inputValue: string;
   handleValueChange: (id: string, value: string) => void;
+  error?: boolean;
 }
 
 const FormInput: React.FC<FormInputProps> = ({
   formData,
+  inputValue,
   handleValueChange,
+  error = false,
 }) => {
   const { id, label, required, type, pattern, placeholder } = formData;
 
-  const [inputValue, setInputValue] = useState('');
-
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
+    handleValueChange(formData.id, event.target.value);
   };
 
-  useEffect(() => {
-    handleValueChange(formData.id, inputValue);
-  }, [inputValue]);
+  useEffect(() => {}, [inputValue]);
 
   return (
     <div className={classes.wrapper}>
@@ -47,6 +47,7 @@ const FormInput: React.FC<FormInputProps> = ({
         pattern={pattern}
         value={inputValue}
         onChange={(e) => handleInputChange(e)}
+        style={{ borderColor: error ? 'red' : 'initial' }}
       />
     </div>
   );
