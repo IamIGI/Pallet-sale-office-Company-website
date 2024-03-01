@@ -1,5 +1,5 @@
 function allowOnlyLetters(value: string): string {
-  const sanitizedValue = value.replace(/[^A-Za-z]/g, '');
+  const sanitizedValue = value.replace(/[^A-Za-z\s]/g, '');
   return sanitizedValue;
 }
 
