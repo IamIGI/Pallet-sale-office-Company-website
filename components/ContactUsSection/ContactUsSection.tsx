@@ -16,17 +16,30 @@ export default function ContactUsSection({
     <div className={classes.wrapper} id="contactSection">
       <SectionBackground>
         <svg
-          width="1718"
-          height="599"
-          viewBox="0 0 1718 599"
+          width="100%"
+          height="399"
+          viewBox="0 0 1718 459"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
         >
           <path
             d="M284.97 212.682L1717.37 0V599H0L284.97 212.682Z"
             fill="currentColor"
           />
         </svg>
+        {/* <svg
+          width="925"
+          height="1085"
+          viewBox="0 0 925 1085"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M153.489 385.242L925 0V1085H0L153.489 385.242Z"
+            fill="#F8F3ED"
+          />
+        </svg> */}
       </SectionBackground>
 
       <div className="sectionWrapper">

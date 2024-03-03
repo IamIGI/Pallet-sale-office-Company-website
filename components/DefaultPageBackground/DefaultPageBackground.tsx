@@ -17,6 +17,7 @@ export default function DefaultPageBackground({
             viewBox="0 0 1820 812"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
           >
             <path d="M0 0H1820V812L656.5 597.5L0 0Z" fill="#F1E7DA" />
           </svg>

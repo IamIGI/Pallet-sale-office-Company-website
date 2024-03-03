@@ -2,17 +2,24 @@
 
 import { ChangeEvent, useEffect, useState } from 'react';
 import classes from './OfferList.module.scss';
-import localStorageUtil, { lsKeys } from '@/utils/localStorage.util';
+import localStorageUtil, {
+  OfferListLS,
+  lsKeys,
+} from '@/utils/localStorage.util';
 
 interface OfferListInterface {
   data: string[];
 }
+
 export default function OfferList({ data }: OfferListInterface) {
+  console.log(data);
   const [isChecked, setIsChecked] = useState<boolean[]>(
     Array.from({ length: data.length }, () => false)
   );
-  const [itemValue, setItemValue] = useState<number[]>(
-    Array.from({ length: data.length }, () => 0)
+  const [itemValue, setItemValue] = useState<OfferListLS[]>(
+    Array.from({ length: data.length }, (v, i) => {
+      return { name: data[i].replace(/ /g, '_'), value: 0 };
+    })
   );
 
   function handleCheckboxChange(
@@ -34,13 +41,14 @@ export default function OfferList({ data }: OfferListInterface) {
     const value = Number(e.target.value);
     setItemValue((prev) => {
       const newArray = [...prev];
-      newArray[index] = value;
+      newArray[index] = { name: newArray[index].name, value };
 
       return newArray;
     });
   }
 
   useEffect(() => {
+    console.log(itemValue);
     localStorageUtil.saveToLocalStorage(lsKeys.offerData, itemValue);
   }, [itemValue]);
 
@@ -61,7 +69,7 @@ export default function OfferList({ data }: OfferListInterface) {
               <div className={classes.amountWrapper}>
                 <p>Ilość</p>
                 <input
-                  value={itemValue[index]}
+                  value={itemValue[index].value}
                   onChange={(e) => handleItemValueChange(e, index)}
                 />
               </div>
