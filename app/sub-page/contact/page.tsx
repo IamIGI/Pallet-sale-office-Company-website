@@ -10,6 +10,10 @@ import copyTextUtil from '@/utils/copyText.util';
 import formValidationUtil from '@/utils/formValidation.util';
 import { sendContactFrom } from '@/utils/api.util';
 import { useRouter } from 'next/navigation';
+import localStorageUtil, {
+  OfferListLS,
+  lsKeys,
+} from '@/utils/localStorage.util';
 
 interface FieldConfig {
   id: string;
@@ -80,6 +84,7 @@ export default function ContactPage() {
         await sendContactFrom(formValues);
         setFormValues(initialFormValues);
         setFormValuesError(initialFormErrorValues);
+        localStorageUtil.deleteFromLocalStorage(lsKeys.offerData);
         router.push('/sub-page/success-page');
       } catch (error) {
         console.log(error);
@@ -94,6 +99,21 @@ export default function ContactPage() {
       message: value,
     }));
   }
+
+  useEffect(() => {
+    const data = localStorageUtil.readFromLocalStorage(
+      lsKeys.offerData
+    ) as OfferListLS[];
+
+    const itemsToBeAdded = data.filter((item) => item.value !== 0);
+    const string = `Witam \n\nChciałbym zamówić:\n${itemsToBeAdded
+      .map((item) => `-${item.name.replace(/_/g, ' ')}: ${item.value} szt.`)
+      .join('\n')}\n\nPozdrawiam`;
+
+    setFormValues((prevValues) => {
+      return { ...prevValues, message: string };
+    });
+  }, []);
 
   return (
     <div className={classes.wrapper}>

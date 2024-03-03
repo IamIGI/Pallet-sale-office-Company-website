@@ -3,6 +3,11 @@ export const lsKeys = {
 } as const;
 export type LsKeys = (typeof lsKeys)[keyof typeof lsKeys];
 
+export interface OfferListLS {
+  name: string;
+  value: number;
+}
+
 function saveToLocalStorage(key: string, data: any): void {
   try {
     const serializedData = JSON.stringify(data);
@@ -25,7 +30,16 @@ function readFromLocalStorage(key: string): any | null {
   }
 }
 
+function deleteFromLocalStorage(key: string): void {
+  try {
+    localStorage.removeItem(key);
+  } catch (error) {
+    console.error('Error deleting from localStorage:', error);
+  }
+}
+
 export default {
   saveToLocalStorage,
   readFromLocalStorage,
+  deleteFromLocalStorage,
 };

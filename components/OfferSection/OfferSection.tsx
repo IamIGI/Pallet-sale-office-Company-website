@@ -21,6 +21,7 @@ export default function OfferSection({ data }: { data: SectionModel }) {
           viewBox="0 0 1726 698"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
         >
           <path d="M-2 0L1726 177.5V577L-2 698V0Z" fill="currentColor" />
         </svg>
