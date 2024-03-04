@@ -49,12 +49,7 @@ function GoogleMapComponent({ locations }: GoogleMapComponentInterface) {
         <InfoWindow
           position={{ lat: selectedPlace.lat, lng: selectedPlace.lng }}
           zIndex={1}
-          options={{
-            pixelOffset: {
-              width: 0,
-              height: -40,
-            },
-          }}
+          options={{ pixelOffset: new window.google.maps.Size(0, -40) }}
           onCloseClick={() => setSelectedPlace(undefined)}
         >
           <div className={classes.infoWindowText}>
