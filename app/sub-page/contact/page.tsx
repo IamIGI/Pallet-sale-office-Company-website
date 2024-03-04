@@ -15,17 +15,9 @@ import localStorageUtil, {
   lsKeys,
 } from '@/utils/localStorage.util';
 
-interface FieldConfig {
-  id: string;
-  label: string;
-  required: boolean;
-  type: 'text' | 'tel' | 'email';
-  pattern?: string;
-}
-
 export default function ContactPage() {
   const router = useRouter();
-  const initialFormValues: { [key: string]: string } = { message: '' };
+  const initialFormValues: { [key: string]: string | never } = { message: '' };
   const initialFormErrorValues: { [key: string]: boolean } = { message: false };
 
   Object.keys(data.form).forEach((fieldName) => {
